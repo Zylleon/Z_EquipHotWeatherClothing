@@ -1,0 +1,5 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Z_EquipHotWeatherClothing\Assemblies\HotWeatherClothing.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Z_EquipHotWeatherClothing\Source\HotWeatherClothing\obj\Debug\EquipHotWeatherClothing.csprojAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Z_EquipHotWeatherClothing\Source\HotWeatherClothing\obj\Debug\EquipHotWeatherClothing.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Z_EquipHotWeatherClothing\Source\HotWeatherClothing\obj\Debug\EquipHotWeatherClothing.csproj.CopyComplete
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Z_EquipHotWeatherClothing\Source\HotWeatherClothing\obj\Debug\HotWeatherClothing.dll

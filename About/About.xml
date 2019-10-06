@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ModMetaData>
+  <name>Equip hot weather clothing</name>
+  <author>Zylle</author>
+  <supportedVersions><li>1.0</li></supportedVersions>
+  <description>
+	Pawns will prefer hot weather gear if it's hot out.
+	
+	Safe to add or remove from existing saves.
+
+</description>
+</ModMetaData>
