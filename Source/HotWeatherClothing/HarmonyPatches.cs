@@ -28,9 +28,9 @@ namespace EquipHotWeatherClothing
 
         public static void ApparelScoreRaw_Postfix(Pawn pawn, Apparel ap, ref float __result)
         {
-            Log.Message("Checking apparel");
+            //NeededWarmth neededCold = PawnApparelGenerator.CalculateNeededWarmth(pawn, pawn.Map.Tile, GenLocalDate.Twelfth(pawn));
 
-            NeededWarmth neededCold = PawnApparelGenerator.CalculateNeededWarmth(pawn, pawn.Map.Tile, GenLocalDate.Twelfth(pawn));
+            float num = GenTemperature.AverageTemperatureAtTileForTwelfth(pawn.Map.Tile, GenLocalDate.Twelfth(pawn));
 
             SimpleCurve InsulationHeatScoreFactorCurve_NeedCold = new SimpleCurve
             {
@@ -44,15 +44,28 @@ namespace EquipHotWeatherClothing
                 }
             };
 
-            if (neededCold == NeededWarmth.Cool)
+
+            // This version uses ComfyTemperatureMax to find if needCool, not comfyTemperatureMin
+            if (num < pawn.def.GetStatValueAbstract(StatDefOf.ComfyTemperatureMax, null) - 4f)
             {
-                Log.Message("Cold is needed");
                 float statValue = ap.GetStatValue(StatDefOf.Insulation_Heat, true);
                 float coldFactor = 1f;
                 coldFactor *= InsulationHeatScoreFactorCurve_NeedCold.Evaluate(statValue);
 
                 __result *= coldFactor;
             }
+
+
+          
+
+            //if (neededCold == NeededWarmth.Cool)
+            //{
+            //    float statValue = ap.GetStatValue(StatDefOf.Insulation_Heat, true);
+            //    float coldFactor = 1f;
+            //    coldFactor *= InsulationHeatScoreFactorCurve_NeedCold.Evaluate(statValue);
+
+            //    __result *= coldFactor;
+            //}
 
         }
 
